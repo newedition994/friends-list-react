@@ -2,14 +2,14 @@ import React from "react";
 
 import "./App.css";
 
-const Person = () => {
-  return <div>Person Component</div>;
-};
+const App = () => <PersonList />;
 
 const PersonList = () => {
   return <Person />;
 };
 
-const App = () => <PersonList />;
+const Person = () => {
+  return <div>Person Component</div>;
+};
 
 export default App;

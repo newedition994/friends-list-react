@@ -32,14 +32,17 @@ const PersonList = () => {
   );
 };
 
-const Person = () => {
-  const url = "https://randomuser.me/api/portraits/thumb/women/5.jpg";
+const Person = props => {
+  const { img, name, occupation } = props.person;
+  const { children } = props;
+
+  const url = `https://randomuser.me/api/portraits/thumb/women/${img}.jpg`;
   return (
     <div className="person">
       <img src={url} alt="" />
       <div>
-        <h4>Name</h4>
-        <h4>Occupation</h4>
+        <h4>{name}</h4>
+        <h4>{occupation}</h4>
       </div>
     </div>
   );

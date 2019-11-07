@@ -5,11 +5,35 @@ import "./App.css";
 const App = () => <PersonList />;
 
 const PersonList = () => {
-  return <Person />;
+  const people = [
+    {
+      img: 5,
+      name: "Nancy",
+      occupation: "developer"
+    },
+    {
+      img: 35,
+      name: "Loni",
+      occupation: "designer"
+    },
+    {
+      img: 15,
+      name: "Adrianna",
+      occupation: "solutions engineer"
+    }
+  ];
+
+  return (
+    <section>
+      <Person person={people[0]} />
+      <Person person={people[1]} />
+      <Person person={people[2]} />
+    </section>
+  );
 };
 
 const Person = () => {
-  const url = "https://randomuser.me/api/portraits/thumb/women/74.jpg";
+  const url = "https://randomuser.me/api/portraits/thumb/women/5.jpg";
   return (
     <div className="person">
       <img src={url} alt="" />

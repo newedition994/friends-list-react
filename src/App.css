@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: linear-gradient(to right, #b0f3f1, #ffcfdf);
 }
 
 .person {
